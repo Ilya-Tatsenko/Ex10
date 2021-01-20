@@ -19,7 +19,7 @@ int function(char x) {
     }
 
 }
-std::string infix2postfix(string x) {
+std::string infix2postfix(std::string x) {
     MyStack<char> st(x.size());
     std::string new_str;
 
