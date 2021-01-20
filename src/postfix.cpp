@@ -19,9 +19,9 @@ int function(char x) {
     }
 
 }
-string infix2postfix(string x) {
+std::string infix2postfix(string x) {
     MyStack<char> st(x.size());
-    string new_str;
+    std::string new_str;
 
     for (int i = 0; i < x.size(); i++) {
         if (function(x[i]) == 100) continue;
