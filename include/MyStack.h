@@ -4,11 +4,11 @@
 
 template <class T>
 class MyStack {
-private:
+ private:
     std::vector<T>* mas;
     int length;
 
-public:
+ public:
     explicit MyStack(int x) : length(x) {
         mas = new std::vector<T>;
         mas->reserve(x);
