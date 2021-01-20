@@ -58,7 +58,7 @@ std::string infix2postfix(std::string x) {
             new_str += st.pop();
             new_str += ' ';
         }
-        new_str.pop_back();
     }
+     new_str.pop_back();
     return new_str;
 }
