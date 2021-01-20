@@ -17,7 +17,6 @@ int function(char x) {
     case ' ':return 100; break;
     default: return -1;
     }
-
 }
 std::string infix2postfix(std::string x) {
     MyStack<char> st(x.size());
@@ -43,7 +42,8 @@ std::string infix2postfix(std::string x) {
             st.pop();
             continue;
         }
-        if (st.isEmpty() || function(x[i]) == 0 || function(x[i]) > function(st.get())) {
+        int t = function(x[i]);
+        if (st.isEmpty() || t == 0 || t > function(st.get())) {
             st.push(x[i]);
             continue;
         } else if (function(st.get()) >= function(x[i])) {
